@@ -48,9 +48,9 @@ for id, text in zip(df_test['ID'], df_test['Text_As_Word_List']):
         if word == 'positive':
             sentiment_count['positive'] += 1
         elif word == 'negative':
-            sentiment_count['negative'] += 1
+            sentiment_count['negative'] += 50
         elif word == 'neutral':
-            sentiment_count['neutral'] += 1
+            sentiment_count['neutral'] += 100
     predicted_class = max(sentiment_count, key=sentiment_count.get)
     writer.writerow([id, predicted_class])
 f.close()
